@@ -4,12 +4,12 @@ spring:
     url: ${URL}
     username: ${USERNAME}
     password: ${PASSWORD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name:
     generate-unique-name: false
   jpa:
     show-sql: true
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    database: MYSQL
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
     hibernate:
       ddl-auto: update
       naming:
@@ -18,3 +18,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+jwt:
+  secret: ThisSecretThisSecretThisSecretThisSecretThisSecretThisSecret
+  expiration-second: 3600000
